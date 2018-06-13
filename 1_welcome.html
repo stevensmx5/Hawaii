@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>夏威夷宝贝大使</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var isMove = false;
+            //判断页面是否滚动至底部
+            /*$(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    isMove = true;
+                } else {
+                    isMove = false;
+                }
+            });*/
+            //获取用户手指按下坐标
+            $(".wel_box").on("vmousedown", function (event) {
+                mouse_y = event.pageY;
+            });
+            //获取用户手指离开屏幕坐标，计算向上滑动90像素以上距离时切换页面
+            $(".wel_box").on("vmouseup", function (event) {
+                var new_y = event.pageY,
+                    move_y = mouse_y - new_y;
+                if (move_y >= 10) {
+                    $('body,html').animate({ scrollTop: 0 }, 0);
+                    $('.wel_box').animate({ height: '0px' }, 500);
+                    $('.wel_2_box').css('height', 'auto');
+                }
+            });
+            //以下是获取图片宽高，并计算窗口内显示照片尺寸
+            /*var img = $('.photo_img');
+            var realWidth;//真实的宽度
+            var realHeight;//真实的高度
+            $("<img/>").attr("src", $(img).attr("src")).load(function () {
+                realWidth = this.width;
+                realHeight = this.height;
+                //计算宽高比
+                var str = realWidth / realHeight;
+                if (str > 1) { //竖版图片
+                    var w = (170 / realHeight) * realWidth + 'px';
+                    $('.photo_img').css({ 'height': '170px', 'width': w });
+                } else {//横版图片
+                    var h = (170 / realWidth) * realHeight + 'px';
+                    $('.photo_img').css({ 'width': '170px', 'height': h });
+                }
+            });*/
+        });
+    </script>
+</head>
+<body>
+    <div class="wel_box">
+        <img class="wel_img" alt="" src="images/1.jpg" />
+        <section class="u-arrow">
+            <img src="images/btn01_arrow.png" />
+        </section>
+    </div>
+
+    <div class="wel_2_box">
+        <img class="wel_2_img" alt="" src="images/wel_2_bg.jpg" />
+        <!--<div class="photo_box">
+            <div class="photo_div">
+                <img class="photo_img" alt="" src="images/21251614343194391.png" />
+            </div>
+        </div>-->
+        <div class="wel_btn">
+            先来一起看看<br />
+            萌娃们可以在夏威夷玩些什么
+        </div>
+        <img class="l_logo" alt="" src="images/hawaii_logo.png" />
+        <img class="r_logo" alt="" src="images/jbb_logo.png" />
+    </div>
+</body>
+</html>

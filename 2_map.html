@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>夏威夷宝贝大使</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".island").click(function () {
+                var n = $(this).data("num");
+                var img_url = "images/island_" + n + ".png";
+                var cla = '".content_' + n + '"';
+                $(".island_img").attr("src", img_url);
+                $(".content_div").removeClass('show');
+                $(".content_"+n).addClass('show');
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            background: url(images/2_map_bg.jpg) no-repeat #f1ece8;
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="map_top">
+        <img class="map_top_img" alt="" src="images/2_map_top.png" />
+        <div class="map_box">
+            <img class="island_img" alt="" src="images/island_2.png" />
+            <div class="island keai" data-num="1"><img alt="" src="images/transparent.png" /></div>
+            <div class="island huou" data-num="2"><img alt="" src="images/transparent.png" /></div>
+            <div class="island maoyi" data-num="3"><img alt="" src="images/transparent.png" /></div>
+            <div class="island hawaii" data-num="4"><img alt="" src="images/transparent.png" /></div>
+        </div>
+    </div>
+    <div class="map_content">
+        <div class="content_div content_1">
+            <img alt="" src="images/keai_1.png" />
+            <img alt="" src="images/keai_2.png" />
+            <img alt="" src="images/keai_3.png" />
+            <div class="content_bottom">
+                <div class="next_btn">下一步</div>
+                <img class="l_logo" alt="" src="images/hawaii_logo.png" />
+                <img class="r_logo" alt="" src="images/jbb_logo.png" />
+            </div>
+        </div>
+        <div class="content_div content_2 show">
+            <img alt="" src="images/huou_1.png" />
+            <img alt="" src="images/huou_2.png" />
+            <img alt="" src="images/huou_3.png" />
+            <div class="content_bottom">
+                <div class="next_btn">下一步</div>
+                <img class="l_logo" alt="" src="images/hawaii_logo.png" />
+                <img class="r_logo" alt="" src="images/jbb_logo.png" />
+            </div>
+        </div>
+        <div class="content_div content_3">
+            <img alt="" src="images/maoyi_1.png" />
+            <img alt="" src="images/maoyi_2.png" />
+            <img alt="" src="images/maoyi_3.png" />
+            <div class="content_bottom">
+                <div class="next_btn">下一步</div>
+                <img class="l_logo" alt="" src="images/hawaii_logo.png" />
+                <img class="r_logo" alt="" src="images/jbb_logo.png" />
+            </div>
+        </div>
+        <div class="content_div content_4">
+            <img alt="" src="images/xwy_1.png" />
+            <img alt="" src="images/xwy_2.png" />
+            <img alt="" src="images/xwy_3.png" />
+            <div class="content_bottom">
+                <div class="next_btn">下一步</div>
+                <img class="l_logo" alt="" src="images/hawaii_logo.png" />
+                <img class="r_logo" alt="" src="images/jbb_logo.png" />
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
