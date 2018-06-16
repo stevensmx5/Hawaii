@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>夏威夷宝贝大使</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //点击上传照片触发隐藏input模拟点击事件
+            $(".uploadimg_btn").click(function () {
+                $('.input_img').trigger("click");
+            });
+            //选择图片后，input值发生变化时生成base64图片，显示预览图
+            $('.input_img').change(function () {
+                var file = this.files[0];//选择上传的文件
+                var r = new FileReader();
+                r.readAsDataURL(file); //Base64
+                $(r).load(function () {
+                    var realWidth;//真实的宽度
+                    var realHeight;//真实的高度
+                    $("<img/>").attr("src", this.result).load(function () {
+                        realWidth = this.width;
+                        realHeight = this.height;
+                        //计算宽高比
+                        var str = realWidth / realHeight;
+                        console.log(realWidth)
+                        console.log(realHeight)
+                        console.log(str)
+                        if (str < 1) { //竖版图片
+                            $(".yulan_img").css({'width':'100%','height':'auto'});
+                        } else {//横版图片
+                            $(".yulan_img").css({ 'width': 'auto', 'height': '100%' });
+                        }
+                    });
+                    $(".yulan_img").attr("src", this.result);
+                });
+                
+            });
+            //点击感叹号弹出图片要求窗口
+            $(".notic").click(function () {
+                $('.alert_box,.notic_alert').removeClass('dis_n');
+            });
+            //点击确认上传按钮事件
+            $('.upload_btn').click(function () {
+                $('.alert_box,.upload_success').removeClass('dis_n');
+            });
+            //关闭弹窗
+            $('.img_close').click(function () {
+                $('.alert_box,.alert_content').addClass('dis_n');
+            });
+        });
+    </script>
+    <style>
+        body {
+            background: url(images/5_uploadpage_bg.jpg) no-repeat bottom #f1ece8;
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+<body>
+    <img class="upload_img" alt="" src="images/5_uploadpage_1.jpg" />
+    <from>
+        <div class="upload_content">
+            <input class="inp_text" type="text" placeholder="宝贝昵称" />
+            <input class="inp_text" type="text" placeholder="宝贝年龄" />
+            <input class="inp_text" type="text" placeholder="家长姓名" />
+            <input class="inp_text" type="text" placeholder="手机号码" />
+            <div class="img_upload_box">
+                <!--upload_bg只是为了按比例撑高div使用-->
+                <img class="upload_bg" alt="" src="images/img_up_box.png" />
+                <!-- -->
+                <div class="upload_btn_box">
+                    <div class="uploadimg_btn f_l">
+                        <p>点击上传照片</p>
+                        <p class="pad_l">+</p>
+                    </div>
+                    <img class="notic" alt="" src="images/notice_icon.png" />
+                </div>
+                <!--预览图-->
+                <img class="yulan_img" alt="" src="" />
+                <!--隐藏的input组件-->
+                <input class="input_img" type="file" accept="image/*" />
+            </div>
+
+            <div class="upload_btn">确认上传</div>
+        </div>
+        <img class="prize_img" alt="" src="images/bottom_logo.png" />
+    </from>
+
+    <div class="alert_box dis_n">
+        <div class="alert_bg"></div>
+        <div class="alert_div">
+            <img class="img_t_l" alt="" src="images/alert_top_left.png" />
+            <img class="img_close" alt="" src="images/close_img.jpg" />
+            <div class="alert_content notic_alert dis_n">
+                <img class="imr_b_r" alt="" src="images/alert_bottom_right.png" />
+                <h2>
+                    照片格式：JPG<br />
+                    照片大小：2M以内<br />
+                    像素宽度：800-1000
+                </h2>
+                <p>
+                    其他要求：<br />
+                    1.参加选拔的宝贝照片需由家长本人拍摄，不得抄袭他人作品，违者一经发现，将被取消资格;<br />
+                    2.参赛照片版权归属夏威夷旅游局，做着享有署名权，主板单位有权保留照片作品且在相关非商业活动中使用。
+                </p>
+            </div>
+            <div class="alert_content upload_success dis_n">
+                <img class="imr_b_r" alt="" src="images/alert_bottom_right.png" />
+                <h1>恭喜您上传成功！</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

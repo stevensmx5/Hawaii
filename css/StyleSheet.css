@@ -5,6 +5,18 @@ body{background: #fff;position:relative;min-height:100%;}ul,li{list-style:none;}
 html,div,img{
     border-image-width:0 !important;
 }
+input::-webkit-input-placeholder{
+    color:#00123f;
+}
+input::-moz-placeholder{
+    color:#00123f;
+}
+input:-moz-placeholder{
+    color:#00123f;
+}
+input:-ms-input-placeholder{
+    color:#00123f;
+}
 
 /*欢迎页面*/
 .wel_box,
@@ -217,11 +229,16 @@ html,div,img{
 	animation: start 1.5s infinite ease-in-out;
 }
 /*活动介绍*/
-.explain_img{
+.explain_img,
+.prize_img,
+.upload_img,
+.upload_content{
     width:100%;
     float:left;
 }
-.explain_btn{
+.explain_btn,
+.prize_btn,
+.upload_btn{
     width:80%;
     margin-left:10%;
     margin-top:15px;
@@ -238,13 +255,220 @@ html,div,img{
     -webkit-user-select:none;
     -ms-user-select:none;
 }
+/*奖品介绍*/
+.prize_text{
+    width:100%;
+    float:left;
+    font-size:16px;
+    line-height:24px;
+    color:#00123f;
+    font-weight:bold;
+    text-align:center;
+    padding:15px 0 25px 0;
+    z-index:10;
+    position:relative;
+}
+.mar_t{
+    margin-top:-93px;
+    position:relative;
+}
+.prize_text span{
+    text-align:center;
+    font-size:13px;
+    line-height:24px;
+    color:#00123f;
+}
+.prize_btn{
+    margin-top:25px;
+}
+/*上传信息页面*/
+.upload_content{
+    box-sizing:border-box;
+    padding:0 8%;
+    margin-top:-19%;
+}
+.upload_btn{
+    width:100%;
+    margin-left:0;
+}
+.upload_content .inp_text{
+    width:100%;
+    float:left;
+    box-sizing:border-box;
+    padding:8px 15px;
+    border:2px solid #00123f;
+    border-radius:5px;
+    color:#00123f;
+    font-size:15px;
+    font-weight:bold;
+    line-height:23px;
+    text-align:center;
+    background-color:#fff;
+    margin-bottom:8px;
+}
+.img_upload_box{
+    width:100%;
+    float:left;
+    background-color:#fff;
+    box-sizing:border-box;
+    border:2px solid #00123f;
+    border-radius:5px;
+    position:relative;
+    margin-bottom:10px;
+    position:relative;
+    overflow:hidden;
+}
+.img_upload_box .upload_bg{
+    width:100%;
+    float:left;
+}
+.upload_btn_box{
+    width:110px;
+    float:left;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:10;
+}
+
+.uploadimg_btn{
+    width:95px;
+}
+.uploadimg_btn p{
+    width:100%;
+    float:left;
+    font-size:15px;
+    font-weight:bold;
+    color:#00123f;
+    line-height:19px;
+}
+.uploadimg_btn .pad_l{
+    padding-left:15px;
+    text-align:center;
+    box-sizing:border-box;
+    font-size:23px;
+    line-height:23px;
+}
+.upload_btn_box .notic{
+    width:15px;
+    height:15px;
+    float:left;
+    margin-top:2px;
+}
+.img_upload_box .yulan_img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:5;
+}
+.input_img{
+    display:none;
+}
+.alert_box{
+    width:100%;
+    height:1500px;
+    float:left;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:20;
+}
+.alert_box .alert_bg{
+    width:100%;
+    height:100%;
+    float:left;
+    background-color:rgba(240,233,200,0.85);
+}
+.alert_div{
+    width:86%;
+    max-height:480px;
+    box-sizing:border-box;
+    padding:8px 5px;
+    background-color:#00123f;
+    border-radius:5px;
+    position:fixed;
+    top:50%;
+    left:7%;
+    transform:translateY(-50%);
+    z-index:25;
+}
+.alert_div .img_t_l{
+    width:40px;
+    position:absolute;
+    top:-14px;
+    left:-13px;
+    z-index:30;
+}
+.alert_div .img_close{
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:-25px;
+    left:50%;
+    transform:translateX(-25px);
+    border-radius:50%;
+    overflow:hidden;
+    z-index:30;
+}
+.alert_div .alert_content{
+    width:100%;
+    float:left;
+    background:url(../images/alert_bg.jpg) no-repeat top left #f3efeb;
+    background-size:100% auto;
+    box-sizing:border-box;
+    padding:0 10px;
+    position:relative;
+    transform:rotateZ(-0.8deg)
+}
+.alert_content .imr_b_r{
+    width:30px;
+    height:auto;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+.alert_div .alert_content h1{
+    width:100%;
+    float:left;
+    font-size:26px;
+    line-height:36px;
+    color:#00123f;
+    text-align:center;
+    font-weight:bold;
+    margin:68px 0;
+}
+.alert_div .alert_content h2{
+    width:100%;
+    float:left;
+    font-size:15px;
+    line-height:21px;
+    color:#00123f;
+    font-weight:bold;
+}
+.alert_div .alert_content p{
+    width:100%;
+    float:left;
+    font-size:13px;
+    line-height:23px;
+    color:#00123f;
+}
+.notic_alert h2{
+    margin:43px 0 15px 0;
+}
+.notic_alert p{
+    margin-bottom:40px;
+}
 
 
 
 
 
 
-
+.dis_n{
+    display:none;
+}
 .wel_2_box .wel_btn:active,
 .next_btn:active,
 .explain_btn:active{
