@@ -8,8 +8,77 @@
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
     <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.alert_bg').click(function () {
+                $('.alert_box,.vote_alert,.alert_div').addClass('dis_n');
+            });
+            $('.vote').click(function () {
+                $('.alert_box,.upload_success').removeClass('dis_n');
+            });
+            $('.img_t_r_close,.img_close').click(function () {
+                $('.alert_box,.alert_div').addClass('dis_n');
+            });
+            $('.vote_notic').click(function () {
+                $('.alert_box,.alert_iframe').removeClass('dis_n');
+            });
+        });
+    </script>
+    <style>
+        body {
+            background: url(images/5_uploadpage_bg.jpg) no-repeat bottom #f1ece8;
+            background-size: 100% auto;
+        }
+    </style>
 </head>
 <body>
+    <img class="vote_img" alt="" src="images/6_vote_1.jpg" />
+    <div class="baby_photo">
+        <img class="photo_img" alt="" src="images/test_photo.jpg" />
+        <div class="vote_info">
+            <p>夏威夷宝贝大使</p>
+            <p>朱思瑶</p>
+            <div class="support_div">
+                <p>4300票</p>
+                <img alt="" src="images/zan.png" />
+            </div>
+        </div>
+    </div>
+    <div class="vote_btn_box">
+        <div class="vote_btn vote">为宝贝投票</div>
+        <div class="vote_btn">欣赏其他宝贝萌照</div>
+        <div class="vote_btn">前往夏威夷</div>
+        <img class="vote_notic" alt="" src="images/notice_icon.png" />
+    </div>
+    <img class="prize_img" alt="" src="images/bottom_logo.png" />
 
+
+    <div class="alert_box">
+        <div class="alert_bg"></div>
+
+        <div class="vote_alert">
+            <img alt="" src="images/arrow.png" />
+            <p>分享到朋友圈，<br />获得亲朋好友的投票支持</p>
+        </div>
+        <div class="alert_div upload_success dis_n">
+            <img class="img_t_l" alt="" src="images/alert_top_left.png" />
+            <img class="img_t_r_close" alt="" src="images/close_img.jpg" />
+            <div class="alert_btn">了解「夏威夷宝贝大使选拔赛」</div>
+            <div class="alert_content upload_success">
+                <img class="imr_b_r" alt="" src="images/alert_bottom_right.png" />
+                <h1>感谢您的支持！</h1>
+            </div>
+        </div>
+
+        <div class="alert_div alert_iframe dis_n">
+            <img class="img_t_l" alt="" src="images/alert_top_left.png" />
+            <img class="img_close" alt="" src="images/close_img.jpg" />
+
+            <div class="alert_content alert_iframe">
+                <img class="imr_b_r" alt="" src="images/alert_bottom_right.png" />
+                <iframe src="clause.html"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

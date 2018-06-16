@@ -42,15 +42,15 @@
             });
             //点击感叹号弹出图片要求窗口
             $(".notic").click(function () {
-                $('.alert_box,.notic_alert').removeClass('dis_n');
+                $('.alert_box,.notic_alert,.alert_div').removeClass('dis_n');
             });
             //点击确认上传按钮事件
             $('.upload_btn').click(function () {
-                $('.alert_box,.upload_success').removeClass('dis_n');
+                $('.alert_box,.upload_success,.alert_div').removeClass('dis_n');
             });
             //关闭弹窗
             $('.img_close').click(function () {
-                $('.alert_box,.alert_content').addClass('dis_n');
+                $('.alert_box,.alert_content,.alert_div').addClass('dis_n');
             });
         });
     </script>
@@ -93,7 +93,7 @@
 
     <div class="alert_box dis_n">
         <div class="alert_bg"></div>
-        <div class="alert_div">
+        <div class="alert_div dis_n">
             <img class="img_t_l" alt="" src="images/alert_top_left.png" />
             <img class="img_close" alt="" src="images/close_img.jpg" />
             <div class="alert_content notic_alert dis_n">
