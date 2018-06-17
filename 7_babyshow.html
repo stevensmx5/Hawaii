@@ -8,6 +8,60 @@
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
     <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                        var h = '<div class="babylist_div">';
+                        h += '<div class="img_box">';
+                        h += '<img class="box_size" alt="" src="images/img_up_box.png" />';
+                        h += '<img class="baby_img" alt="" src="images/test_photo.jpg" />';
+                        h += '</div>';
+                        h += '<p class="name">YYYY</p>';
+                        h += '<div class="vote_num_box">';
+                        h += '<span>4700票</span>';
+                        h += '<img alt="" src="images/zan.png" />';
+                        h += '</div>';
+                        h += '</div>';
+                        h += '<div class="babylist_div">';
+                        h += '<div class="img_box">';
+                        h += '<img class="box_size" alt="" src="images/img_up_box.png" />';
+                        h += '<img class="baby_img" alt="" src="images/test_photo.jpg" />';
+                        h += '</div>';
+                        h += '<p class="name">YYYY</p>';
+                        h += '<div class="vote_num_box">';
+                        h += '<span>4700票</span>';
+                        h += '<img alt="" src="images/zan.png" />';
+                        h += '</div>';
+                        h += '</div>';
+                        h += '<div class="babylist_div">';
+                        h += '<div class="img_box">';
+                        h += '<img class="box_size" alt="" src="images/img_up_box.png" />';
+                        h += '<img class="baby_img" alt="" src="images/test_photo.jpg" />';
+                        h += '</div>';
+                        h += '<p class="name">YYYY</p>';
+                        h += '<div class="vote_num_box">';
+                        h += '<span>4700票</span>';
+                        h += '<img alt="" src="images/zan.png" />';
+                        h += '</div>';
+                        h += '</div>';
+                        h += '<div class="babylist_div">';
+                        h += '<div class="img_box">';
+                        h += '<img class="box_size" alt="" src="images/img_up_box.png" />';
+                        h += '<img class="baby_img" alt="" src="images/test_photo.jpg" />';
+                        h += '</div>';
+                        h += '<p class="name">YYYY</p>';
+                        h += '<div class="vote_num_box">';
+                        h += '<span>4700票</span>';
+                        h += '<img alt="" src="images/zan.png" />';
+                        h += '</div>';
+                        h += '</div>';
+
+                        $('.babylist_box').append(h);
+                }
+            });
+        });
+    </script>
     <style>
         body {
             background: url(images/7_babylist_bg.png) no-repeat bottom #f1ece8;
@@ -20,13 +74,13 @@
     <img class="babylist_img" alt="" src="images/7_babylist_top.jpg" />
     <div class="babylist_btn">了解「夏威夷宝贝大使选拔赛」</div>
     <img class="babylist_img" alt="" src="images/7_babylist_font.png" />
-    <div class="babylist_div">
+    <div class="babylist_box">
         <div class="babylist_div">
             <div class="img_box">
                 <img class="box_size" alt="" src="images/img_up_box.png" />
                 <img class="baby_img" alt="" src="images/test_photo.jpg" />
             </div>
-            <p class="name blue">XXX</p>
+            <p class="name">XXX</p>
             <div class="vote_num_box">
                 <span>4300票</span>
                 <img alt="" src="images/zan.png" />
@@ -37,7 +91,7 @@
                 <img class="box_size" alt="" src="images/img_up_box.png" />
                 <img class="baby_img" alt="" src="images/test_photo.jpg" />
             </div>
-            <p class="name blue">XXX</p>
+            <p class="name">XXX</p>
             <div class="vote_num_box">
                 <span>4300票</span>
                 <img alt="" src="images/zan.png" />
@@ -48,7 +102,7 @@
                 <img class="box_size" alt="" src="images/img_up_box.png" />
                 <img class="baby_img" alt="" src="images/test_photo.jpg" />
             </div>
-            <p class="name blue">XXX</p>
+            <p class="name">XXX</p>
             <div class="vote_num_box">
                 <span>4300票</span>
                 <img alt="" src="images/zan.png" />
@@ -59,7 +113,7 @@
                 <img class="box_size" alt="" src="images/img_up_box.png" />
                 <img class="baby_img" alt="" src="images/test_photo.jpg" />
             </div>
-            <p class="name blue">XXX</p>
+            <p class="name">XXX</p>
             <div class="vote_num_box">
                 <span>4300票</span>
                 <img alt="" src="images/zan.png" />
