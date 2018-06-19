@@ -107,12 +107,133 @@ input:-ms-input-placeholder{
     position:absolute;
     bottom:15%;
     left:0;
+    z-index:20;
+}
+.map_box .island_img_noclick{
+    width:100%;
+    position:absolute;
+    left:0;
+    top:27%;
+}
+@-webkit-keyframes island {
+	50% {-webkit-transform: scale(1.2);}
+	100% {-webkit-transform: scale(1);}
+}
+@-moz-keyframes island {
+	50% {-moz-transform: scale(1.2);}
+	100% {-moz-transform: scale(1);}
+}
+@keyframes island {
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}
+@-webkit-keyframes island_4 {
+	50% {-webkit-transform: scale(1.1);}
+	100% {-webkit-transform: scale(1);}
+}
+@-moz-keyframes island_4 {
+	50% {-moz-transform: scale(1.1);}
+	100% {-moz-transform: scale(1);}
+}
+@keyframes island_4 {
+	50% {transform: scale(1.1);}
+	100% {transform: scale(1);}
+}
+.map_box .island_img_1{
+    width:14%;
+    position:absolute;
+    top:15%;
+    left:17%;
+    -webkit-animation: island 2s ease-in-out infinite ;
+	-moz-animation: island 2s ease-in-out infinite ;
+	animation: island 2s ease-in-out infinite ;
+}
+.map_box .island_img_2{
+    width:15%;
+    position:absolute;
+    top:24%;
+    left:30%;
+    -webkit-animation: island 2s ease-in-out infinite ;
+	-moz-animation: island 2s ease-in-out infinite ;
+	animation: island 2s ease-in-out infinite ;
+}
+.map_box .island_img_3{
+    width:16%;
+    position:absolute;
+    top:37%;
+    left:51%;
+    -webkit-animation: island 2s ease-in-out infinite ;
+	-moz-animation: island 2s ease-in-out infinite ;
+	animation: island 2s ease-in-out infinite ;
+}
+.map_box .island_img_4{
+    width:22%;
+    position:absolute;
+    top:53%;
+    left:63%;
+    -webkit-animation: island_4 2s ease-in-out infinite ;
+	-moz-animation: island_4 2s ease-in-out infinite ;
+	animation: island_4 2s ease-in-out infinite ;
+}
+.map_box p{
+    float:left;
+    position:absolute;
+    font-size:12px;
+    color:#727272;
+}
+.map_box p.active{
+    font-size:16px;
+    color:#00123f;
+    font-weight:bold;
+}
+.map_box .island_text_1{
+    top:6%;
+    left:14%;
+}
+.map_box .island_text_1.active{
+    top:5%;
+    left:14%;
+}
+.map_box .island_text_2{
+    top:14%;
+    left:32%;
+}
+.map_box .island_text_2.active{
+    left:31%;
+}
+.map_box .island_text_3{
+    top:35%;
+    left:64%;
+}
+.map_box .island_text_3.active{
+    top:34%;
+    left:64%;
+}
+.map_box .island_text_4{
+    top:45%;
+    left:72%;
+}
+.map_box .island_text_4.active{
+    top:47%;
+    left:71%;
+}
+.map_box .island_text_5{
+    top:25%;
+    left:45%;
+}
+.map_box .island_text_6{
+    top:44%;
+    left:37%;
+}
+.map_content{
+    position:relative;
+    z-index:10;
 }
 .content_div{
     display:none;
 }
 .content_1{
-    margin-top:-26%;
+    margin-top:-20%;
 }
 .content_2{
     margin-top:-31%;
