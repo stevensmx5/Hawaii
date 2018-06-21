@@ -7,7 +7,10 @@
     <title>夏威夷宝贝大使</title>
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
+    <link type="text/css" rel="stylesheet" href="css/mobileSelect.css">
     <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/mobileSelect.min.js"></script>
+    <script type="text/javascript" src="js/data_json.js"></script>
     <script type="text/javascript">
         $(function () {
             //点击上传照片触发隐藏input模拟点击事件
@@ -53,6 +56,7 @@
                 $('.alert_box,.alert_content,.alert_div').addClass('dis_n');
             });
         });
+
     </script>
     <style>
         body {
@@ -66,7 +70,16 @@
     <from>
         <div class="upload_content">
             <input class="inp_text" type="text" placeholder="宝贝昵称" />
-            <input class="inp_text" type="text" placeholder="宝贝年龄" />
+            <!--<select class="sel_l">
+                <option></option>
+            </select>
+            <select>
+                <option></option>
+            </select>-->
+            <div id="chose_city" class="inp_text">
+                选择省市
+            </div>
+            <input type="text" class="city_input" name="city" style="display:none;" />
             <input class="inp_text" type="text" placeholder="家长姓名" />
             <input class="inp_text" type="text" placeholder="手机号码" />
             <div class="img_upload_box">
@@ -115,5 +128,27 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+
+        var mobileSelect = new MobileSelect({
+            trigger: '#chose_city',
+            title: '地区选择',
+            wheels: [
+                {data : CityData}
+            ],
+            transitionEnd: function (indexArr, data) {
+                //console.log(data);
+            },
+            callback: function (indexArr, data) {
+                var input_val='';
+                for (i = 0; i < data.length; i++) {
+                    input_val += data[i].value+' ';
+                }
+                //console.log(input_val)
+                $(".city_input").val(input_val)
+            }
+        });
+    </script>
 </body>
 </html>

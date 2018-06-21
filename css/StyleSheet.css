@@ -1,4 +1,4 @@
-ï»¿html,body,div,span,iframe,map,font,img,a img,samp,strong,hr,
+html,body,div,span,iframe,map,font,img,a img,samp,strong,hr,
 h1,h2,h3,h4,h5,h6,b,p,blockquote,a,address,code,dl,dt,dd,ol,
 ul,li,form,label,table,tr,td,th,input{padding:0;margin:0;border:0;font-weight:normal;font-size:16px;font-family: Microsoft Yahei, Arial, Helvetica, sans-serif; color:#606060;}
 body{background: #fff;position:relative;min-height:100%;}ul,li{list-style:none;}dl{}.f_l{float:left;}.f_r{float:right;}
@@ -18,7 +18,7 @@ input:-ms-input-placeholder{
     color:#00123f;
 }
 
-/*æ¬¢è¿é¡µé¢*/
+/*»¶Ó­Ò³Ãæ*/
 .wel_box,
 .wel_box .wel_img,
 .wel_2_box,
@@ -87,7 +87,7 @@ input:-ms-input-placeholder{
 .wel_2_box .r_logo{
     right:5%;
 }
-/*åœ°å›¾é¡µé¢*/
+/*µØÍ¼Ò³Ãæ*/
 .map_top,
 .map_top_img,
 .map_box,
@@ -236,7 +236,7 @@ input:-ms-input-placeholder{
     margin-top:-20%;
 }
 .content_2{
-    margin-top:-31%;
+    margin-top:-20%;
 }
 .content_3{
     margin-top:-26%;
@@ -352,7 +352,7 @@ input:-ms-input-placeholder{
 	-moz-animation: start 1.5s infinite ease-in-out;
 	animation: start 1.5s infinite ease-in-out;
 }
-/*æ´»åŠ¨ä»‹ç»*/
+/*»î¶¯½éÉÜ*/
 .explain_img,
 .prize_img,
 .upload_img,
@@ -382,7 +382,7 @@ input:-ms-input-placeholder{
     -webkit-user-select:none;
     -ms-user-select:none;
 }
-/*å¥–å“ä»‹ç»*/
+/*½±Æ·½éÉÜ*/
 .prize_text{
     width:100%;
     float:left;
@@ -408,7 +408,7 @@ input:-ms-input-placeholder{
 .prize_btn{
     margin-top:25px;
 }
-/*ä¸Šä¼ ä¿¡æ¯é¡µé¢*/
+/*ÉÏ´«ĞÅÏ¢Ò³Ãæ*/
 .upload_content{
     box-sizing:border-box;
     padding:0 8%;
@@ -493,7 +493,7 @@ input:-ms-input-placeholder{
 .input_img{
     display:none;
 }
-/*æŠ•ç¥¨é¡µé¢*/
+/*Í¶Æ±Ò³Ãæ*/
 .baby_photo{
     width:80%;
     float:left;
@@ -567,7 +567,7 @@ input:-ms-input-placeholder{
     right:10px;
     z-index:20;
 }
-/*æ—…æ¸¸äº§å“åˆ—è¡¨é¡µé¢*/
+/*ÂÃÓÎ²úÆ·ÁĞ±íÒ³Ãæ*/
 .product_list{
     width:100%;
     float:left;
@@ -589,7 +589,7 @@ input:-ms-input-placeholder{
 .product_list a:first-child{
     margin-top:-10px;
 }
-/*å®è´åˆ—è¡¨*/
+/*±¦±´ÁĞ±í*/
 .babylist_btn{
     margin-top:-36px;
 }
@@ -662,7 +662,7 @@ input:-ms-input-placeholder{
 }
 
 
-/*å¼¹çª—*/
+/*µ¯´°*/
 .alert_box{
     width:100%;
     height:1500px;
@@ -823,7 +823,7 @@ input:-ms-input-placeholder{
     transform:rotateZ(0.8deg);
     overflow:hidden;
 }
-/*è§„åˆ™ä¸æ¡æ¬¾*/
+/*¹æÔòÓëÌõ¿î*/
 .clause_content{
     width:100%;
     float:left;
