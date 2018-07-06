@@ -82,6 +82,7 @@ input:-ms-input-placeholder{
     bottom:15px;
 }
 .wel_2_box .l_logo{
+    width:24%;
     left:5%;
 }
 .wel_2_box .r_logo{
@@ -338,6 +339,7 @@ input:-ms-input-placeholder{
     margin:0;
 }
 .content_bottom .l_logo{
+    width:24%;
     left:5%;
 }
 .content_bottom .r_logo{
